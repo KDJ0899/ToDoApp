@@ -1,5 +1,7 @@
 package com.kdj.ToDoApp.todoitem;
 
+import org.springframework.data.annotation.Id;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -14,7 +16,9 @@ import lombok.Setter;
 @Builder
 
 public class ToDoItem {
-	private String id;
+	
+	@Id  
+	private String id; //@Id를 추가 함으로써 DB에서 알아서 값을 생생해줌.
 	private String title;
 	private boolean done;
 }
