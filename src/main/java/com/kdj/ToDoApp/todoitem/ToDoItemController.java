@@ -56,6 +56,7 @@ public class ToDoItemController {
 			toDoItem = toDoItemService.create(toDoItem);
 		} catch (final Exception e) {
 			errors.add(e.getMessage());
+			e.printStackTrace();
 		}
 		
 		return ToDoItemAdapter.toToDoItemResoponse(toDoItem, errors);
